@@ -12,7 +12,7 @@ body,html {
 }
 
 .icon {
-  width: 70px;
+  width: 90px;
   text-align: center;
   cursor: pointer;
   position: absolute;
@@ -21,32 +21,34 @@ body,html {
 }
 
 .icon img {
-  width: 100%;           /* se ajusta al nuevo ancho del icono */
+  width: 100%;         
   height: auto;
 }
 
 .window {
   background-color: #ece9d8;
   border: 2px solid #000080;
-  width: 420px;
+  width: 430px;
   position: absolute;
   top: 80px;
   left: 80px;
   box-shadow: 4px 4px 6px rgba(0,0,0,0.4);
+  z-index: 999;
 }
 
 .titlebar {
+  width: 422px;
   background-color: #000080;
   color: white;
   padding: 4px;
   font-size: 14px;
+  z-index: 999;
 }
 
 .content {
   padding: 18px;
   text-align: center;
 }
-
 
 
 #balanzaImg {
@@ -66,11 +68,18 @@ body,html {
   margin-top:10px;
 }
 
+#tictactoeSection {
+  display: none;            
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #board {
   display: grid;
   grid-template-columns: repeat(3, 60px);
   gap: 2px;
-  margin: 15px auto;
 }
 
 .cell {
@@ -82,6 +91,7 @@ body,html {
   font-size: 20px;
   cursor: pointer;
 }
+
 
 .hidden {
   display:none;
@@ -98,4 +108,51 @@ body,html {
   padding:15px 22px;
   border:2px solid #000;
   box-shadow: 4px 4px 6px rgba(0,0,0,0.3);
+}
+
+#gato {
+  position: absolute;
+  width: 40px;       
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.1s linear, top 0.1s linear;
+  z-index: 1;
+}
+
+#folder {
+  position: absolute;
+  z-index: 99;
+}
+
+#folder span {
+  display: none;      
+}
+
+
+#ingresarBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#comicBubble {
+  display: flex;
+  align-items: center;
+}
+
+#comicBubble img {
+  width: 200px;   
+}
+
+#bubbleText {
+  position: absolute;
+  top: 0px;     
+  left: 20px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  pointer-events: none;
+  width: 125px;         
+  word-wrap: break-word;
 }

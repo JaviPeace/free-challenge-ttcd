@@ -9,26 +9,32 @@
   <audio id="clickSound" src="iconos/boton_sonido_click.mp3"></audio>
   <audio id="openSound"  src="iconos/boton_sonido_open.mp3"></audio>
 
+  <img id="gato" src="iconos/gato_chico.png" />
+
+  <div id="comicBubble" style="position:absolute; display:none; z-index:10;">
+  <img src="iconos/viñeta.png" alt="viñeta"/>
+  <span id="bubbleText" style="position:absolute; top:60px; left:45px; color:black; font-weight:bold;"></span>
+  </div>
+
+
+
   <div id="desktop">
-    <!-- Fondo de escritorio estilo Windows XP -->
     <img src="iconos/fondo_xp.jpg" id="wallpaper" />
 
-    <!-- Carpeta inicial -->
     <div id="folder" class="icon">
       <img src="iconos/folder.png" />
       <span>ábreme</span>
     </div>
 
-    <!-- Ventana balanza -->
     <div id="balanzaWindow" class="window hidden">
-      <div class="titlebar">Balanza</div>
+      <div class="titlebar">Se necesitan credenciales para ingresar</div>
 
       <div class="content">
         <img id="balanzaImg" src="iconos/balanza-derecha.png" />
 
         <div class="botones_balanza">
-          <button id="leftBtn">⬅ izquierda</button>
-          <button id="rightBtn">derecha ➡</button>
+          <button id="leftBtn">izquierda</button>
+          <button id="rightBtn">derecha</button>
         </div>
 
         <div id="userSection"    class="hidden">
@@ -50,13 +56,16 @@
       </div>
     </div>
 
-    <!-- Mensaje final -->
     <div id="felicitaciones" class="hidden">
       🎉 ¡Felicitaciones! 🎉
     </div>
 
     <div id="perdiste" class="hidden">
       ❌ Perdiste, se reinicia...
+    </div>
+
+    <div id="empataste" class="hidden">
+      Empataste, se reinicia...
     </div>
   </div>
 
