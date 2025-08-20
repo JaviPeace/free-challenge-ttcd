@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Windows XP Balanza</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <audio id="clickSound" src="iconos/boton_sonido_click.mp3"></audio>
+  <audio id="openSound"  src="iconos/boton_sonido_open.mp3"></audio>
+
+  <div id="desktop">
+    <!-- Fondo de escritorio estilo Windows XP -->
+    <img src="iconos/fondo_xp.jpg" id="wallpaper" />
+
+    <!-- Carpeta inicial -->
+    <div id="folder" class="icon">
+      <img src="iconos/folder.png" />
+      <span>ábreme</span>
+    </div>
+
+    <!-- Ventana balanza -->
+    <div id="balanzaWindow" class="window hidden">
+      <div class="titlebar">Balanza</div>
+
+      <div class="content">
+        <img id="balanzaImg" src="iconos/balanza-derecha.png" />
+
+        <div class="botones_balanza">
+          <button id="leftBtn">⬅ izquierda</button>
+          <button id="rightBtn">derecha ➡</button>
+        </div>
+
+        <div id="userSection"    class="hidden">
+          <input type="text" placeholder="Usuario"/>
+        </div>
+
+        <div id="passwordSection" class="hidden">
+          <input type="password" placeholder="Contraseña"/>
+        </div>
+
+        <div id="tictactoeSection" class="hidden">
+          <div id="board">
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+          </div>
+          <button id="ingresarBtn" class="hidden">Ingresar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensaje final -->
+    <div id="felicitaciones" class="hidden">
+      🎉 ¡Felicitaciones! 🎉
+    </div>
+
+    <div id="perdiste" class="hidden">
+      ❌ Perdiste, se reinicia...
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
