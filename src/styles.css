@@ -139,11 +139,11 @@ body,html {
 
 #comicBubble {
   display: flex;
-  align-items: center;
+  align-items: center;           
 }
 
 #comicBubble img {
-  width: 200px;   
+  width: 300px;   
 }
 
 #bubbleText {
